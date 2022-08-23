@@ -21,7 +21,7 @@ const CurrentInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 230px;
+  width: 240px;
   position: absolute;
   top: 20px;
   left: 50px;
@@ -30,6 +30,7 @@ const CurrentInfo = styled.div`
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState("");
   const [forcastWeather, setForcastWeather] = useState("");
+
   useEffect(() => {
     async function fetchData() {
       let data = await getCurrentWeather("sydney");
@@ -41,7 +42,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  return currentWeather ? (
+  return (
     <Container>
       <CurrentInfo>
         <DateBox />
@@ -53,8 +54,6 @@ const App = () => {
         forcastWeather={forcastWeather}
       />
     </Container>
-  ) : (
-    <div>no data</div>
   );
 };
 
