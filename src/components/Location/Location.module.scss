@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 200px;
+  color: #fff;
+  text-align: right;
+  .location {
+    font-size: 30px;
+  }
+  .coordinate {
+    font-weight: bold;
+  }
+}
