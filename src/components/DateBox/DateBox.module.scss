@@ -13,3 +13,17 @@
     color: #fff;
   }
 }
+
+@media (max-width:576px) {
+  .container{
+    .time{
+      font-size: 50px;
+      span{
+        font-size: 20px;
+      }
+    }
+    .date{
+      font-size: 20px;
+    }
+  }
+}

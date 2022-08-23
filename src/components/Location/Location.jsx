@@ -9,9 +9,10 @@ const Location = ({ currentLocation }) => {
       {currentLocation ? (
         <>
           <div className={styles.location}>{`${name}/${sys.country}`}</div>
-          <div
-            className={styles.coordinate}
-          >{`${coord.lat}LAT ${coord.lon}LON`}</div>
+          <div className={styles.coordinate}>
+            <span>{`${coord.lat}LAT`}</span>
+            <span>{`${coord.lon}LON`}</span>
+          </div>
         </>
       ) : (
         <Loading />

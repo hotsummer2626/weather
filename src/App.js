@@ -25,6 +25,11 @@ const CurrentInfo = styled.div`
   position: absolute;
   top: 20px;
   left: 50px;
+  @media (max-width: 576px) {
+    width: 200px;
+    top: 10px;
+    left: 10px;
+  }
 `;
 
 const App = () => {

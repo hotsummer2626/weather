@@ -10,5 +10,21 @@
   }
   .coordinate {
     font-weight: bold;
+    span{
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    top: 25px;
+    right: 10px;
+    .location{
+      font-size: 20px;
+    }
+    .coordinate{
+      font-size: 12px;
+    }
   }
 }

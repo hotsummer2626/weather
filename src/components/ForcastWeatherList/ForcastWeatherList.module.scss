@@ -31,9 +31,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         .week {
           text-align: center;
-          padding: 3px 13px;
+          width: max-content;
+          padding: 3px 23px;
           background: #333431;
           border-radius: 50px;
         }
@@ -49,7 +51,6 @@
         height: 230px;
         .icon {
           position: initial;
-          font-size: 100px;
           justify-self: right;
           align-self: center;
           transform: translateX(0);
@@ -61,6 +62,7 @@
         }
         .details {
           justify-content: center;
+          align-items: initial;
           .week {
             padding: 5px 30px;
           }
@@ -69,6 +71,39 @@
             font-size: 16px;
             .max {
               margin: 20px 0 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container{
+    overflow: scroll;
+    .wrapper{
+      grid-template-columns: 340px repeat(6, 1fr);
+      .item{
+        padding: 20px 10px;
+        .details{
+          .week{
+            padding: 3px 15px;
+          }
+          .temp{
+            width: 90px;
+          }
+        }
+        &:first-child{
+          gap: 0;
+          .icon{
+            img{
+              transform: translateX(-20px);
+            }
+          }
+          .details {
+            .temp {
+              font-size: 20px;
             }
           }
         }
