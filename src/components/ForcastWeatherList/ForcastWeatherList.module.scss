@@ -22,10 +22,9 @@
       padding: 20px 30px;
       .icon {
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 55px;
       }
       .details {
         height: 100%;
@@ -39,11 +38,8 @@
           border-radius: 50px;
         }
         .temp {
-          color: #6c6c6c;
-          .night,
-          .day {
-            font-size: 12px;
-          }
+          color: #a4a4a4;
+          font-size: 12px;
         }
       }
       &:first-child {
@@ -57,6 +53,11 @@
           justify-self: right;
           align-self: center;
           transform: translateX(0);
+          width: 100%;
+          img{
+            display: block;
+            width: 120%;
+          }
         }
         .details {
           justify-content: center;
@@ -65,11 +66,8 @@
           }
           .temp {
             color: #fff;
-            .night,
-            .day {
-              font-size: 16px;
-            }
-            .night {
+            font-size: 16px;
+            .max {
               margin: 20px 0 10px;
             }
           }

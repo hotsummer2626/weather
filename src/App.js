@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import styled from "styled-components";
 import bgImg from "./assets/bg.jpg";
@@ -6,6 +6,7 @@ import DateBox from "./components/DateBox/DateBox";
 import CurrentWeatherConditions from "./components/CurrentWeatherConditions/CurrentWeatherConditions";
 import Location from "./components/Location/Location";
 import ForcastWeatherList from "./components/ForcastWeatherList/ForcastWeatherList";
+import { getCurrentWeather, getForecastWeather } from "./api/apis";
 
 const Container = styled.div`
   width: 100vw;
@@ -27,15 +28,33 @@ const CurrentInfo = styled.div`
 `;
 
 const App = () => {
-  return (
+  const [currentWeather, setCurrentWeather] = useState("");
+  const [forcastWeather, setForcastWeather] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      let data = await getCurrentWeather("sydney");
+      setCurrentWeather(data);
+      const { coord } = data;
+      let forcastDate = await getForecastWeather(coord.lat, coord.lon);
+      setForcastWeather(forcastDate);
+    }
+    fetchData();
+  }, []);
+
+  return currentWeather ? (
     <Container>
       <CurrentInfo>
         <DateBox />
-        <CurrentWeatherConditions />
+        <CurrentWeatherConditions conditions={currentWeather} />
       </CurrentInfo>
-      <Location />
-      <ForcastWeatherList />
+      <Location currentLocation={currentWeather} />
+      <ForcastWeatherList
+        currentWeather={currentWeather}
+        forcastWeather={forcastWeather}
+      />
     </Container>
+  ) : (
+    <div>no data</div>
   );
 };
 

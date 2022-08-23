@@ -1,12 +1,14 @@
 export const weeks = [
   "Sunday",
   "Monday",
-  "Tuseday",
+  "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
 ];
+
+export const weeks_short = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export const months = [
   "Jan",

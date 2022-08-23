@@ -10,6 +10,11 @@
       color: rgba(255, 255, 255, 0.701);
       display: flex;
       justify-content: space-between;
+      &:first-child{
+        font-size: 22px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 }
