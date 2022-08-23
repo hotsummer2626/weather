@@ -1,0 +1,15 @@
+.container{
+  .time{
+    font-size: 60px;
+    color: #fff;
+    span{
+      text-transform: uppercase;
+      font-size: 25px;
+      margin-left: 20px;
+    }
+  }
+  .date{
+    font-size: 25px;
+    color: #fff;
+  }
+}
