@@ -26,7 +26,7 @@ const CurrentInfo = styled.div`
   top: 20px;
   left: 50px;
   @media (max-width: 576px) {
-    width: 270px;
+    width: 240px;
     top: 10px;
     left: 10px;
   }
