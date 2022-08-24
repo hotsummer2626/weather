@@ -81,7 +81,7 @@
 
 @media (max-width: 576px) {
   .container{
-    overflow: scroll;
+    overflow-x: scroll;
     .wrapper{
       grid-template-columns: 340px repeat(6, 1fr);
       .item{
